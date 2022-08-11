@@ -26,6 +26,15 @@ const Navbar = ({ setPage }) => {
       >
         People
       </button>
+      <button
+        onClick={() => {
+          setPage("species");
+          toggleActiveState(2);
+        }}
+        className={activeIndex === 2 ? "active" : ""}
+      >
+        Species
+      </button>
     </nav>
   );
 };

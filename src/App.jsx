@@ -6,6 +6,7 @@ import People from "./components/People";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import Species from "./components/Species";
 
 const Layout = () => {
   const [page, setPage] = useState("planets");
@@ -16,7 +17,13 @@ const Layout = () => {
         <h1>Star Wars Wiki</h1>
         <Navbar setPage={setPage} />
         <div className="content">
-          {page === "planets" ? <Planets /> : <People />}
+          {page === "planets" ? (
+            <Planets />
+          ) : page === "people" ? (
+            <People />
+          ) : (
+            <Species />
+          )}
         </div>
       </div>
     </>
