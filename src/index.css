@@ -1,0 +1,91 @@
+:root {
+  --primary-color: #222;
+  --secondary-color: #2FC28D;
+}
+
+body {
+  margin: 0;
+  background: var(--primary-color);
+  color: #ddd;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.App {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+h1 {
+  color: var(--secondary-color);
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.current-page {
+  color: var(--secondary-color);
+}
+
+button {
+  margin: 0 10px;
+  background: transparent;
+  border: 3px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  color: #ccc;
+  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.content {
+  text-align: left;
+}
+
+.card {
+  padding: 8px 16px;
+  background: #1b1b1b;
+  margin: 16px 0;
+  border-radius: 20px;
+}
+
+.card p {
+  margin: 6px 0;
+  color: #999;
+}
+
+.card h3 {
+  margin: 10px 0;
+  color: var(--secondary-color);
+}
+
+.active {
+  background: rgba(204, 204, 204, 0.4);
+}
+
+button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    width: 960px;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  .active {
+    background: rgba(204, 204, 204, 0.4);
+  }
+}
